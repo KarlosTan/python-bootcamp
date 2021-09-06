@@ -92,6 +92,7 @@ def ReturnChange(owe, coins):
         if num > 0:
             print('Change owed:', round(owe,2))                                     #Python has strange rounding errors
             print('*The machine spits out', num, denomination[i], 'piece(s)')
+            coins[i] -= num
         owe -= num*denomination[i]
     print('Thanks for using the vending machine.')
 
